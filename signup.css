@@ -37,6 +37,10 @@ header{
     background: rgba(0, 0, 0, 0.5);
     transition: all 0.7s ease;
 }
+.name {
+    font-style: italic;
+    font-family: 'Phudu', cursive;
+}
 
 .logo{
     align-items: center;

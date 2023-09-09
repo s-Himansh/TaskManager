@@ -20,6 +20,10 @@ body{
     flex-direction: column;
     min-height: 100vh
 }
+.name {
+    font-style: italic;
+    font-family: 'Phudu', cursive;
+}
 .content{
     flex: 1;
 }

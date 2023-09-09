@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sign Up - Task Manager</title>
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo">
+            <i class='bx bx-command'></i>
+            <span>Tasker</span>
+        </a>
+    </header>
+
+    <section class="signupSection">
+        <div class="signupSectionInside">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="name">
+                    <input type="text" placeholder="Full Name" id="fullname" required>
+                </div>
+                <div class="name">
+                    <input type="email" placeholder="Email" id="mail" required>
+                </div>
+                <div class="name">
+                    <input type="password" placeholder="Set Password" id="pass" required>
+                </div>
+                <div class="name">
+                    <input type="input" placeholder="Retype Password" id="retype" required>
+                </div>
+                <button type="submit" onclick="registeration()" class="signup">Sign Up</button>
+            </form>
+            <p>Already a user ? <a href="#">Log in</a></p>
+        </div>
+    </section>
+
+    <script src="signup.js"></script>
+</body>
+</html>

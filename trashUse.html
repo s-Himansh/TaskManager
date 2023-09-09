@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="trashUse.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-tooltip"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=JetBrains+Mono:wght@300;400&family=Phudu:wght@600&display=swap" rel="stylesheet">
+        <title>Main Dashboard</title>
+    </head>
+
+    <body >
+            <header>
+                <a href="" class="logo">
+                    <i class='bx bx-command' id = 'demo'></i>
+                    <span id="name">Karmāṇi</span>
+                </a>   
+
+                <select id="category-filter">
+                    <option value="all" class="dropdown">--filter--</option>
+                    <option value="1" class="dropdown">Work</option>
+                    <option value="2" class="dropdown">Shopping</option>
+                    <option value="3" class="dropdown">Travel</option>
+                </select>
+                
+
+                <div class="dropdown-container">
+                </div>
+                    
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search by task name" hidden>
+                    <div class="search-icon" id="search-icon">
+                        <i class='bx bx-search-alt' style="font-size:27px;"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="graph-container">
+                <div class="quote">
+                    <blockquote>
+                        "The price of success is hard work, dedication to the job at hand, and the determination that whether we win or lose, we have applied the best of ourselves to the task at hand."
+                    </blockquote>
+                    <cite>- Vince Lombardi</cite>
+                    <div style="display: flex;align-items:center;">
+                        <div style="margin-top: 60px;margin-left:60px;outline:auto;padding:50px 80px;background:rgba(0,0,0,0.9);">
+                            <div style="font-size:1.3rem;margin-bottom:50px;">
+                                Your tasking 
+                            </div>
+                            <div>
+                                <button id="add-task-button" class="btn2">Add Task</button>
+                            </div>
+                            <div>
+                                <button id="sort-btn" class="btn3">Sort tasks</button>
+                            </div>
+                            <div>
+                                <button id="voice-button" class="btn4">[Voice Search] -> Yes</button>
+                            </div>
+                        </div>
+                        <object id="svgObject" type="image/svg+xml" style="width:400px;height:400px;margin-left:160px;margin-right:320px;margin-top:50px"></object>
+
+                    </div>
+                </div>
+                <div class="graph">
+                    <canvas id="doughnutChart" width="410" height="410"></canvas>
+                    <div class="task-count">
+
+                        <p id="count">Total Tasks : <span id="total-task-count" class="fancy-count">0</span></p>
+                        <p id="count">Completed Tasks : <span id="completed-task-count" class="fancy-count">0</span></p>
+                        <p id="count">Pending  Tasks : <span id="pending-task-count" class="fancy-count">0</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="border">
+                <section class="box">
+                    <div class="task-list" id="listContainer">
+                    </div>
+                </section>
+
+                <dialog id="edit-dialog" style="border-color: black;">
+                    <form id="edit-form">
+                        <h3>Edit Task</h3>
+                        <label for="edit-task-input" >Task</label>
+                        <input type="text" id="edit-task-input" style="color: #ADEFD1;" required>
+                        <label for="edit-task-category" >Category</label>
+                        <select name="" id="edit-task-category" style="color: #ADEFD1;">
+                            <option value="0" class="dropdown" style="color: #ADEFD1;">--Category--</option>
+                            <option value="1" class="dropdown" style="color: #ADEFD1;">Work</option>
+                            <option value="2" class="dropdown" style="color: #ADEFD1;">Shopping</option>
+                            <option value="3" class="dropdown" style="color: #ADEFD1;">Travel</option>
+                        </select>
+                        <label for="edit-task-date">Date</label>
+                        <input type="date" id="edit-task-date"  style="color: #ADEFD1;"required>
+                        <button type="submit" class="btn1">Save Changes</button>
+                        <button type="button" id="cancel-edit" class="btn5">Cancel</button>
+                    </form>
+                </dialog>
+                <dialog id="add-task-dialog">
+                    <h3>Add Task</h3>
+                    <form id="task-form">
+                        <input type="text" id="task-input" placeholder="add a new task" />
+
+                        <select name="" id="task-category">
+                            <option value="0" class="dropdown">--Category--</option>
+                            <option value="1" class="dropdown">Work</option>
+                            <option value="2" class="dropdown">Shopping</option>
+                            <option value="3" class="dropdown">Travel</option>
+                        </select>
+
+                        <input type="date" id="task-date" >
+
+                        <button type="submit" class="btn-delete2">Add Task </button>
+                        <button id="cancel-add-task" class="btn-delete1">Cancel</button>
+                    </form>
+                </dialog>
+            </div>
+        <script src="managerJS.js"></script>
+    </body>
+    </html>

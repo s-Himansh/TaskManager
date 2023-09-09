@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=JetBrains+Mono:wght@300;400&display=swap');
+
+*{
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    min-height: 100vh;
+    background: #00203FFF;
+    color: #ADEFD1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+.content{
+    flex: 1;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.7s ease;
+}
+
+.logo{
+    align-items: center;
+}
+.logo i{
+    color: #ADEFD1FF;
+    font-size: 25px;
+    margin-right: 9px;
+}
+.logo span{
+    color: #ADEFD1FF;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.signupSection {
+    padding: 150px 0;
+    color: white;
+    text-align: center;
+}
+.signupSectionInside {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.signupSectionInside h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+.name input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ADEFD1FF;
+    font-size: 1rem;
+}
+.name input::placeholder {
+    color: gray;
+}
+
+.signup {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+.signup:hover {
+    background-color: #ADEFD1FF;
+    color: black;
+}
+.signupSection p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+.signupSection p a {
+    color: green;
+    text-decoration: none;
+    transition: color 0.6s ease;
+}
+.signupSection p a:hover {
+    color: #ADEFD1FF;
+}
+
+footer {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ADEFD1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 43rem;
+    width: 100%; /* Set the footer width to take the available space */
+}
+
+
+
+@media (max-width: 1280px){
+    header{
+        padding: 4px 2%;
+        transition: 0.2s;
+    }
+}
+@media (max-width: 1090px){
+    #menuIcon{
+        display: block;
+    }
+}
